@@ -3,3 +3,84 @@
 html {
   box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  background-color: #45badd;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: wrap column;
+  gap: 20px; 
+  background: url('./robot.gif');
+  background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+#button {
+  cursor: pointer;
+  outline: none;
+  width: 200px;
+  height: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  color: white;
+  background-color: #ff3482;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px 20px 10px rgb(0 0 0 / .2);
+  transition: all .15s linear;
+  
+}
+
+#button:hover {
+  filter: brightness(95%);
+}
+
+#button:active {
+  transform: scale(.98);
+}
+
+#button:disabled {
+  cursor: default;
+  filter: brightness(35%);
+}
+
+/* Media Query: Tablet or Smaller */
+@media screen and (max-width: 1000px) {
+  .container {
+    background-size: cover;
+    background-position: center center;
+  }
+
+  #button {
+    box-shadow: 5px 5px 30px 20px #ff34824e;
+  }
+}
+
+#joke {
+  font-family: 'Courier New', Courier, monospace;
+  cursor: pointer;
+  outline: none;
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  color: rgb(7, 7, 7);
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px 20px 10px rgb(0 0 0 / .2);
+  transition: all .15s linear;
+}
+
+audio {
+  background: #f1f3f4;
+  box-shadow: 2px 2px 20px 10px rgb(255 255 255/ .2);
+  border-radius: 5px;
+}
