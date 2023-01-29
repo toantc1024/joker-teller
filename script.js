@@ -40,3 +40,14 @@ const getJokes = async () => {
 
 button.addEventListener('click', getJokes);
 
+audioElement.addEventListener('play', () => {
+    button.disabled = true;
+});
+
+audioElement.addEventListener('ended', () => {
+    button.disabled = false;
+});
+
+audioElement.addEventListener('pause', () => {
+    button.disabled = false;
+});
